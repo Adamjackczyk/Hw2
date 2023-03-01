@@ -22,6 +22,7 @@
             If decIncome > 0 Then
                 decNet = (decIncome * _cdecFica) + (decIncome * _cdecFed) + (decIncome * _cdecState)
                 decNet -= decIncome
+                decNet *= -1
                 LblNetPayShow.Text = decNet.ToString("C")
             Else
                 MsgBox("Enter a possative number.")
